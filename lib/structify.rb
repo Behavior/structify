@@ -9,7 +9,7 @@ require 'structify/version'
 module Structify
   private
 
-  def self.providers
-    ObjectSpace.each_object(Providers::Base.singleton_class).select{ |klass| klass.superclass == Providers::Base }
+  def self.controllers
+    ObjectSpace.each_object(Controllers::Base.singleton_class).select{ |klass| klass.superclass == Controllers::Base }
   end
 end
