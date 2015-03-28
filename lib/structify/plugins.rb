@@ -1,5 +1,5 @@
 module Structify
-  module Controllers
+  module Plugins
     class Base
       def id
         'base'
@@ -8,13 +8,10 @@ module Structify
       def to_s
         id
       end
-
-      def receive(arg)
-      end
     end
   end
 end
 
-Dir[File.expand_path('../controllers', __FILE__) << '/*.rb'].each do |file|
+Dir[File.expand_path('../plugins', __FILE__) << '/*.rb'].each do |file|
   require file
 end
